@@ -1,0 +1,30 @@
+Programa en C++ que use recursividad.
+
+1. El usuario digita una cadena y el programa te regresa la cadena pero invertida.
+2. Dijita "hola amor" te regresa "roma aloh".
+
+#include<iostream>
+using namespace std;
+
+string inversa(string a){
+	if(a.length()==1){
+	return a;	
+	}
+	
+	else {
+	return inversa(a.substr(1))+a[0];	
+	}
+}
+
+int main(){
+	string a, res;
+	
+	cout<<"Ingrese una cadena: "<<endl;
+	getline(cin, a);
+	
+	res= inversa(a);
+	
+	cout<<"La cadena inevrsa es: "<< res <<endl;
+	
+	return 0;
+}

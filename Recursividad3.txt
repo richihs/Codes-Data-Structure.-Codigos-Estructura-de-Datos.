@@ -1,0 +1,31 @@
+Programa en C++ que calcule el MCD de 2 números digitados por usuario.
+
+#include<iostream>
+using namespace std;
+
+int MCD(int a, int b){
+	
+	if(a==b)return a;
+	else if(a>b)
+	 return MCD(a-b,b);
+		 else
+		  return MCD(a,b-a);
+}
+
+int main(void){
+	int a,b,res;
+	cout<<endl<<"Introduce un numero para a: ";
+	cin>>a;
+		if(a==0){		
+		}
+		else{
+			cout<<endl<<"Introduce un número para b: ";
+			cin>>b;	
+			res=MCD(a,b);
+			cout<<endl<<"El resultado es:"<<res<<endl;
+		}	
+}
+
+
+
+

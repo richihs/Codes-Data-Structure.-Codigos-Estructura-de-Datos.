@@ -1,0 +1,24 @@
+Programa en C++ que usando recursividad, que te de el cociente de una división.
+
+#include<iostream>
+using namespace std;
+
+int div(int a, int b){
+	int res;
+	if(a-b<=0){
+		res= 0;
+	} else{
+		res= 1+((a-b)/b);
+	}
+}
+
+int main(void){
+	int a, b;
+	int res;
+	cout<<"Ingrese dividendo: ";
+	cin>> a;
+	cout<<endl<<"Ingrese divisor: ";
+	cin>> b;
+	res=div(a, b);
+	cout<<endl<<"El cociente de la división es: "<< res<<endl;
+}

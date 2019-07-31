@@ -1,0 +1,29 @@
+Programa que calcule la serie fibonacci del número que digite el usuario usando recursividad.
+
+#include<iostream>
+ using namespace std;
+
+int fibo(int valor) {
+if (valor<2) return valor;
+else return fibo(valor-1)+fibo(valor-2);;
+}
+
+int main(void){
+	int x, res;
+	cout<<"Ingrese el número de la sucesión a calcular: "; 
+	cin>> x;
+	if(x>0){
+		 res=fibo(x);
+        cout<<endl<<"La serie de fibonacci es: "<<res<<endl;
+	}   
+		else 
+	      cout<<"Ingrese otro número de la sucesión a calcular"<<endl; 
+	      cin>> x;
+	      if(x>0)
+         res=fibo(x);
+         cout<<endl<<"La serie de fibonacci es: "<<res<<endl;	
+}
+
+
+
+

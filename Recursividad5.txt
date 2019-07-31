@@ -1,0 +1,22 @@
+Programa en C++ que eleve un número digitado por el usuario al cuadrado, usando recursividad.
+
+#include<iostream>
+using namespace std;
+
+int cuad(int n){
+	int res;
+	if(n==1){
+	res= 1;	
+	} else{
+		res= cuad(n-1)+ (2*n-1);
+	}
+	return res;	
+}
+
+int main(void){
+	int n, res;	
+	cout <<"Introduzca un número para elevarlo al cuadrado: ";
+	cin >>n;
+	res= cuad(n);
+	cout<<"El resultado es del cuadrado de "<< n << " es: "<< res <<endl;
+}

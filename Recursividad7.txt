@@ -1,0 +1,32 @@
+Programa en C++ que usando recursividad, te resuelva la multiplicación de 2 números dados por el usuario.
+
+#include <iostream>
+using namespace std;
+
+int rusa(int a, int b) {
+	int res;
+ if (a==1) {
+ 	res=b;
+ }
+ else if (a%2!=0) {
+ 	res=(b+ rusa( a/2 , b*2)); 
+ }
+else {
+	res=(rusa( a/2 , b*2));
+}
+}
+
+int main(){
+	int a, b, res;
+	
+	cout<<"Ingrese valor de a: ";
+	cin>>a;
+	cout<<endl<<"Ingrese valor de b: ";
+	cin>>b;
+	res=(rusa( a/2 , b*2));
+	
+	cout<<endl<<"El resultado de la multiplicación es: "<< res<<endl;
+	
+	
+	
+}

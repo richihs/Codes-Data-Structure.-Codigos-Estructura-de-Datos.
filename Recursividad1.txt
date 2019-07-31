@@ -1,0 +1,34 @@
+Programa en C++ para elevar un número a una potencia usando un método recursivo.
+
+#include<iostream>
+using namespace std;
+
+double potencia(double X, int p)
+{
+	double res;
+	if (p==0)res=1;
+	else res=X*potencia(X,p-1);
+	cout<<res<<endl;
+	return res;
+}
+
+int main(void)
+{
+	double valor, res;
+	int p;
+	cout<<endl<<"Elevar un numero a una potencia de forma recursiva."<<endl;
+	do
+	{
+		cout<<endl<<"Introduce el numero (cero para terminar):";
+		cin>>valor;
+		if(valor==0)break;
+		do
+		{
+			cout<<endl<<"Introduce la potencia (entero no negativo):";
+			cin>>p;
+		}
+		while(p<0);
+		res=potencia(valor,p);
+		cout<<endl<<"El resultado es:"<<res<<endl;
+	}while(true);
+}
